@@ -1,7 +1,13 @@
 def main(lst: list, k='id') -> dict:
     result = {}
+    values_id = set()
     for d in lst:
-        pass
+        values_id.add(d.get(k))
+    for i in values_id:
+        result[i] = {}
+    for d in lst:
+        result[d[k]].update(d)
+    return result
 
 
 
