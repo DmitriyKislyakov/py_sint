@@ -132,3 +132,33 @@ def squard_roots(a:int, b:int, c:int) -> tuple:
 
 # print(squard_roots(4, 5, 1))
 
+def random_word(text: str):
+    n_t = text.split()
+    random.shuffle(n_t)
+    return ' '.join(n_t)
+
+random_word('dfsdfs fa sa f asfggfdg dfgsg df ')
+
+
+def zero_column(lst: list, n: int):
+    for r in range(len(lst)):
+        lst[r][n] = 0
+    return lst
+
+l = [
+	[11, 12, 13, 14, 15],
+	[21, 22, 23, 24, 25],
+	[31, 32, 33, 34, 35],
+	[41, 42, 43, 44, 45],
+	[51, 52, 53, 54, 55],
+]
+
+print(zero_column(l, 3))
+
+def new_equation():
+    while True:
+        a, b, c = random.randint(1, 100), random.randint(1, 100), random.randint(1, 100)
+        if (b**2 - 4*a*c) >0:
+            return f'{a}x**2 + {b}x + {c}'
+
+print(new_equation())
