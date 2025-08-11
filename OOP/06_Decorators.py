@@ -16,6 +16,6 @@ class Temperature:
 
 t = Temperature(45)
 print(t.__dict__)
-print(t.get_temp_k)
+print(t.get_temp_k )
 print(t.f_to_c(50))
 print(t.freeze_point(0))
