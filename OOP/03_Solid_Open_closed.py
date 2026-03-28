@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-class PaymentProcessor:
+class PaymentProcessor(ABC):
     @abstractmethod
     def pay(self):
         pass
